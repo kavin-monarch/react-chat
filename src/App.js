@@ -10,6 +10,7 @@ import Welcome from './components/Welcome'
 import './App.css'
 
 
+
 function App() {
     const [data, setData] = useState(contactsMessages)
     const [contactSelected, setContactSelected] = useState({})
