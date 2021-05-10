@@ -10,7 +10,7 @@ export default function MessagesBox({ messages }) {
     return (
         <div className="chats">
             {messages
-                .sort((a, b) => a.date.getTime() - b.date.getTime())
+                // .sort((a, b) => a.date.getTime() - b.date.getTime())
                 .map((m) => (
                     <Message message={m} key={m.id} />
                 ))}

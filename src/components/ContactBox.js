@@ -3,10 +3,11 @@ import doubleCheck from './assets/done_all.svg'
 import Avatar from './Avatar'
 
 export default function ContactBox({ contact, setContactSelected, messages }) {
-    const maxTs = Math.max(...messages.map((m) => m.date.getTime()))
-    const lastMsg = messages.find((m) => m.date.getTime() === maxTs)
+    const lastTime = Math.max(...messages.map((m) => m.date.getTime()))
+    const lastMsg = messages.find((m) => m.date.getTime() === lastTime)
 
-    function truncate(text, length) {
+    function reduce(text, length) {
+        // console.log(contact);
         return text.length > length ? `${text.substring(0, length)} ...` : text
     }
     return (
@@ -19,7 +20,7 @@ export default function ContactBox({ contact, setContactSelected, messages }) {
                 </div>
                 <div className="last-msg">
                     <img src={doubleCheck} alt="" className="icon-small" />
-                    <span className="text">{truncate(lastMsg.msg, 20)}</span>
+                    <span className="text">{reduce(lastMsg.msg, 20)}</span>
                 </div>
             </div>
         </div>

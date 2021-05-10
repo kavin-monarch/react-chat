@@ -37,12 +37,12 @@ function App() {
         })
         setSpan(spa1);
         setData(newData)
-        setMessage('killer');
+        setMessage('');
     }
 
     function filterContacts(data, search) {
         const result = data.filter(({ contact }) => {
-            return !search || contact.name.toLowerCase().includes(search.toLowerCase())
+            return contact.name.toLowerCase().includes(search.toLowerCase())
         })
         setFilterContacts(result)
     }
