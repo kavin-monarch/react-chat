@@ -1,0 +1,47 @@
+.chat-input .input {
+    height: 5vh;
+    border-radius: 1rem;
+    border: 2px solid rgb(122, 175, 112);
+    width: 100%;
+    padding: 0.5rem 1rem;
+    overflow-y:hidden;
+
+}
+.chat-input-box{
+    position: relative;
+    display: flex;
+    height: 3.5rem;
+    align-items: center;
+    background: #f0f0f0;
+    justify-content: space-between;
+}
+.input:focus {
+    outline: none;
+}
+
+.suggestion{
+    height:20vh;
+    border-radius:10px 10px 0 0;
+    background: #e5ddd5;
+    position:absolute;
+    bottom:100%;
+    width:98.6%;
+    border:3px solid #d64824;
+    overflow-y: scroll;
+}
+
+
+.mention {
+    background-color: rgb(40, 48, 168);
+    color: white;
+    border-radius: 7px;
+    border: 2px solid #ccc;
+    margin-right: 3px;
+    padding: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .right-section {
+    width: 100%;
+}
